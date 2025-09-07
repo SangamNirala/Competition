@@ -11,6 +11,43 @@ BrandForge AI transforms business ideas into complete brand identities using a s
 - **Phase 3**: Revolutionary Visual Generation System with consistency management
 - **Phase 3.2**: Multi-Asset Consistency System with brand memory and learning
 
+## ⚡ Quick Start for GitHub Codespaces
+
+### Prerequisites
+- Open this project in GitHub Codespaces or github.dev
+
+### 1. Setup MongoDB (Docker)
+```bash
+docker run -d -p 27017:27017 --name mongodb mongo:latest
+```
+
+### 2. Setup Backend (Terminal 1)
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn server:app --host 0.0.0.0 --port 8001 --reload
+```
+
+### 3. Setup Frontend (Terminal 2)
+```bash
+cd frontend
+yarn install
+yarn start
+```
+
+### 4. Make Ports Public
+- Go to **PORTS** tab at bottom of screen
+- Right-click ports **3000** and **8001** → **"Port Visibility"** → **"Public"**
+- Click globe icon next to port **3000** to open the application
+
+### 5. Access Application
+- **Frontend**: Click globe icon on port 3000 in PORTS tab
+- **Backend API**: Add `/docs` to port 8001 URL for API documentation
+
+**That's it! Your BrandForge AI is ready to use!** 🎉
+
+---
+
 ## 🏗️ Architecture
 
 ### Backend (FastAPI + Python)
